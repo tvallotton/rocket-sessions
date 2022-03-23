@@ -1,4 +1,5 @@
 #![warn(clippy::all)]
+#![doc = include_str!("../README.md")]
 #[macro_use]
 extern crate async_trait;
 
