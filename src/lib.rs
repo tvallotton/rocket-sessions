@@ -22,13 +22,7 @@ pub mod in_memory;
 #[async_trait]
 pub trait SessionManager {
     type Error: Debug + Display;
-    async fn set(
-        &self,
-        id: &str,
-        key: &str,
-        value: &str,
-        time: Duration,
-    ) -> Result<(), Self::Error>;
+    async fn set(&self, id: &str, key: &str, val: &str, time: Duration) -> Result<(), Self::Error>;
     async fn get(&self, id: &str, key: &str) -> Result<Option<String>, Self::Error>;
     async fn delete(&self, id: &str, key: &str) -> Result<(), Self::Error>;
     async fn expire_in(&self, id: &str, key: &str, time: Duration) -> Result<(), Self::Error>;

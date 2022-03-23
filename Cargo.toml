@@ -2,11 +2,14 @@
 name = "rocket-sessions"
 version = "0.1.0"
 edition = "2021"
+author = "Tomas Vallotton <tvallotton@uc.cl>"
+license = "Apache-2.0"
+repository = "git@github.com:tvallotton/rocket-sessions.git"
+keywords = ["rocket", "sessions"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
-
-in-memory = [ "chashmap"]
+in-memory = ["chashmap"]
 
 [dependencies]
 async-trait = "0.1.52"
